@@ -19,10 +19,24 @@
 // Ejercicio 3
 /* Crea una variable llamada cont que sea del tipo entero, después crea otra variable llamada bool que sea del tipo booleano y por último una variable llamada str que sea del tipo string. Recuerda utilizar la palabra reservada var para este ejercicio. */
 
-const cont = 8
-const bool = true
-const str = 'perro'
+// const cont = 8
+// const bool = true
+// const str = 'perro'
 
-console.log(`La variable cont es igual a: ${cont}`)
-console.log(`La variable bool es igual a: ${bool}`)
-console.log(`La variable str es igual a: ${str}`)
+// console.log(`La variable cont es igual a: ${cont}`)
+// console.log(`La variable bool es igual a: ${bool}`)
+// console.log(`La variable str es igual a: ${str}`)
+
+// Ejercicio 4
+/* Crea una función que se llame mayorDeEdad, reciba una edad como parametro y regrese si el usuario es "Mayor de edad" o es "Menor de edad" */
+
+function mayorDeEdad (edad) {
+  if (edad >= 18) {
+    return 'Mayor de edad'
+  } else if (edad < 18 && edad >= 0) {
+    return 'Menor de edad'
+  }
+}
+
+console.log(`Pedro que tiene 19 años es: ${mayorDeEdad(19)}`)
+console.log(`Marco que tiene 15 años es: ${mayorDeEdad(15)}`)
