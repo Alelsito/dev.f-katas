@@ -128,13 +128,13 @@
 
 // Version corta
 
-const numeros = [4, 213, 78, 1, 5, 8]
+// const numeros = [4, 213, 78, 1, 5, 8]
 
-function largest (numeros) {
-  return Math.max(...numeros)
-}
+// function largest (numeros) {
+//   return Math.max(...numeros)
+// }
 
-console.log(`El numero mas grande del array ${numeros} es: ${largest(numeros)}`)
+// console.log(`El numero mas grande del array ${numeros} es: ${largest(numeros)}`)
 
 // Version larga
 
@@ -150,3 +150,29 @@ console.log(`El numero mas grande del array ${numeros} es: ${largest(numeros)}`)
 // }
 
 // console.log(`El numero mas grande del arreglo ${numeros} es: ${largest(numeros)}`)
+
+// Ejercicio 🔟
+
+function game (jugador1, jugador2) {
+  if (jugador1 === 'Piedra' && jugador2 === 'Papel') {
+    return 'J2'
+  } else if (jugador1 === 'Piedra' && jugador2 === 'Tijeras') {
+    return 'J1'
+  } else if (jugador1 === 'Piedra' && jugador2 === 'Piedra') {
+    return 'Empate'
+  } else if (jugador1 === 'Papel' && jugador2 === 'Piedra') {
+    return 'J1'
+  } else if (jugador1 === 'Papel' && jugador2 === 'Tijeras') {
+    return 'J2'
+  } else if (jugador1 === 'Papel' && jugador2 === 'Papel') {
+    return 'Empate'
+  } else if (jugador1 === 'Tijeras' && jugador2 === 'Piedra') {
+    return 'J2'
+  } else if (jugador1 === 'Tijeras' && jugador2 === 'Papel') {
+    return 'J1'
+  } else if (jugador1 === 'Tijeras' && jugador2 === 'Tijeras') {
+    return 'Empate'
+  }
+}
+
+console.log(`Jugador1: Piedra vs Jugador 2: Papel quien gana? ${game('Piedra', 'Papel')}`)
