@@ -111,13 +111,42 @@
 
 /* Crea una función llamada multiple que reciba como parámetro un número para evaluar si un número es divisible entre 5 y 11 o no lo es. En caso de ser divisible entre 5 y 11, retornar true En caso de no ser divisible entre 5 y 11, retornar false */
 
-function multiple (numero) {
-  if (numero % 5 === 0 && numero % 11 === 0) {
-    return true
-  } else {
-    return false
-  }
+// function multiple (numero) {
+//   if (numero % 5 === 0 && numero % 11 === 0) {
+//     return true
+//   } else {
+//     return false
+//   }
+// }
+
+// console.log(`El numero 55 es multiplo de 5 y de 11? ${multiple(55)}`)
+// console.log(`El numero 3 es multiplo de 5 y de 11? ${multiple(3)}`)
+
+// Ejercicio 9️⃣
+
+/* Crea una función llamada largest que reciba como parámetro un arreglo de números, esta función debe retornar el número más grande del arreglo. */
+
+// Version corta
+
+const numeros = [4, 213, 78, 1, 5, 8]
+
+function largest (numeros) {
+  return Math.max(...numeros)
 }
 
-console.log(`El numero 55 es multiplo de 5 y de 11? ${multiple(55)}`)
-console.log(`El numero 3 es multiplo de 5 y de 11? ${multiple(3)}`)
+console.log(`El numero mas grande del array ${numeros} es: ${largest(numeros)}`)
+
+// Version larga
+
+// let mayor = 0
+
+// function largest (numeros) {
+//   for (let i = 0; i < numeros.length; i++) {
+//     if (numeros[i] > mayor) {
+//       mayor = numeros[i]
+//     }
+//   }
+//   return mayor
+// }
+
+// console.log(`El numero mas grande del arreglo ${numeros} es: ${largest(numeros)}`)
