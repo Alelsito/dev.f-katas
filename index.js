@@ -48,16 +48,44 @@
         - "Cero" si el número es cero.
 */
 
-function evaluate (number) {
-  if (number > 0) {
-    return 'Positivo'
-  } else if (number < 0) {
-    return 'Negativo'
-  } else if (number === 0) {
-    return 'Cero'
+// function evaluate (number) {
+//   if (number > 0) {
+//     return 'Positivo'
+//   } else if (number < 0) {
+//     return 'Negativo'
+//   } else if (number === 0) {
+//     return 'Cero'
+//   }
+// }
+
+// console.log(`El numero 20 es: ${evaluate(20)}`)
+// console.log(`El numero -38 es: ${evaluate(-38)}`)
+// console.log(`El numero 0 es: ${evaluate(0)}`)
+
+// Ejercicio 6
+/* Crear un ciclo for o while que almacene en un array llamado pares los numeros pares que hay entre el 0 y el 100, empezando desde 0 */
+
+// V.1 (For)
+const pares = []
+
+for (let i = 0; i <= 100; i++) {
+  if (i % 2 === 0) {
+    pares.push(i)
   }
 }
 
-console.log(`El numero 20 es: ${evaluate(20)}`)
-console.log(`El numero -38 es: ${evaluate(-38)}`)
-console.log(`El numero 0 es: ${evaluate(0)}`)
+console.log(pares)
+
+// V.2 (While)
+const pares2 = []
+
+let number = 0
+
+while (number <= 100) {
+  if (number % 2 === 0) {
+    pares2.push(number)
+  }
+  number++
+}
+
+console.log(pares2)
