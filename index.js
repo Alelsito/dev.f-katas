@@ -30,13 +30,34 @@
 // Ejercicio 4
 /* Crea una función que se llame mayorDeEdad, reciba una edad como parametro y regrese si el usuario es "Mayor de edad" o es "Menor de edad" */
 
-function mayorDeEdad (edad) {
-  if (edad >= 18) {
-    return 'Mayor de edad'
-  } else if (edad < 18 && edad >= 0) {
-    return 'Menor de edad'
+// function mayorDeEdad (edad) {
+//   if (edad >= 18) {
+//     return 'Mayor de edad'
+//   } else if (edad < 18 && edad >= 0) {
+//     return 'Menor de edad'
+//   }
+// }
+
+// console.log(`Pedro que tiene 19 años es: ${mayorDeEdad(19)}`)
+// console.log(`Marco que tiene 15 años es: ${mayorDeEdad(15)}`)
+
+// Ejercicio 5
+/* Escribe una función llamada evaluate que reciba como parámetro un número retorne lo siguiente:
+        - "Positivo" si el número es positivo.
+        - "Negativo" si el número es negativo.
+        - "Cero" si el número es cero.
+*/
+
+function evaluate (number) {
+  if (number > 0) {
+    return 'Positivo'
+  } else if (number < 0) {
+    return 'Negativo'
+  } else if (number === 0) {
+    return 'Cero'
   }
 }
 
-console.log(`Pedro que tiene 19 años es: ${mayorDeEdad(19)}`)
-console.log(`Marco que tiene 15 años es: ${mayorDeEdad(15)}`)
+console.log(`El numero 20 es: ${evaluate(20)}`)
+console.log(`El numero -38 es: ${evaluate(-38)}`)
+console.log(`El numero 0 es: ${evaluate(0)}`)
