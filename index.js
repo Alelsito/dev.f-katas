@@ -153,26 +153,50 @@
 
 // Ejercicio 🔟
 
-function game (jugador1, jugador2) {
-  if (jugador1 === 'Piedra' && jugador2 === 'Papel') {
-    return 'J2'
-  } else if (jugador1 === 'Piedra' && jugador2 === 'Tijeras') {
-    return 'J1'
-  } else if (jugador1 === 'Piedra' && jugador2 === 'Piedra') {
-    return 'Empate'
-  } else if (jugador1 === 'Papel' && jugador2 === 'Piedra') {
-    return 'J1'
-  } else if (jugador1 === 'Papel' && jugador2 === 'Tijeras') {
-    return 'J2'
-  } else if (jugador1 === 'Papel' && jugador2 === 'Papel') {
-    return 'Empate'
-  } else if (jugador1 === 'Tijeras' && jugador2 === 'Piedra') {
-    return 'J2'
-  } else if (jugador1 === 'Tijeras' && jugador2 === 'Papel') {
-    return 'J1'
-  } else if (jugador1 === 'Tijeras' && jugador2 === 'Tijeras') {
-    return 'Empate'
+// function game (jugador1, jugador2) {
+//   if (jugador1 === 'Piedra' && jugador2 === 'Papel') {
+//     return 'J2'
+//   } else if (jugador1 === 'Piedra' && jugador2 === 'Tijeras') {
+//     return 'J1'
+//   } else if (jugador1 === 'Piedra' && jugador2 === 'Piedra') {
+//     return 'Empate'
+//   } else if (jugador1 === 'Papel' && jugador2 === 'Piedra') {
+//     return 'J1'
+//   } else if (jugador1 === 'Papel' && jugador2 === 'Tijeras') {
+//     return 'J2'
+//   } else if (jugador1 === 'Papel' && jugador2 === 'Papel') {
+//     return 'Empate'
+//   } else if (jugador1 === 'Tijeras' && jugador2 === 'Piedra') {
+//     return 'J2'
+//   } else if (jugador1 === 'Tijeras' && jugador2 === 'Papel') {
+//     return 'J1'
+//   } else if (jugador1 === 'Tijeras' && jugador2 === 'Tijeras') {
+//     return 'Empate'
+//   }
+// }
+
+// console.log(`Jugador1: Piedra vs Jugador 2: Papel quien gana? ${game('Piedra', 'Papel')}`)
+
+// Ejercicio 1️⃣1️⃣
+
+/*
+  Crea una función llamada isEqual() que reciba dos parámetros y evalúe si estos son iguales.
+  Retorna true. Si los dos parámetros son iguales retorna true.
+  Retorna false. Si los dos parámetros son diferentes retorna false.
+  Ten en cuenta que deben de ser iguales tanto en valor como tipo de dato.
+*/
+
+const letra1 = 1
+const letra2 = 1
+const letra3 = '1'
+
+function isEqual (uno, dos) {
+  if (uno === dos) {
+    return true
+  } else {
+    return false
   }
 }
 
-console.log(`Jugador1: Piedra vs Jugador 2: Papel quien gana? ${game('Piedra', 'Papel')}`)
+console.log(`Los datos letra 1 y letra 2 son iguales? ${isEqual(letra1, letra2)}`)
+console.log(`Los datos letra 1 y letra 3 son iguales? ${isEqual(letra1, letra3)}`)
