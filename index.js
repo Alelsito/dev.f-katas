@@ -96,13 +96,28 @@
     - "Consonante" si la letra es una consonante
 */
 
-function letter (letra) {
-  if (letra === 'a' || letra === 'e' || letra === 'i' || letra === 'o' || letra === 'u') {
-    return 'Vocal'
+// function letter (letra) {
+//   if (letra === 'a' || letra === 'e' || letra === 'i' || letra === 'o' || letra === 'u') {
+//     return 'Vocal'
+//   } else {
+//     return 'Consonante'
+//   }
+// }
+
+// console.log(`La letra a es: ${letter('a')}`)
+// console.log(`La letra h es: ${letter('h')}`)
+
+// Ejercicio 8️⃣
+
+/* Crea una función llamada multiple que reciba como parámetro un número para evaluar si un número es divisible entre 5 y 11 o no lo es. En caso de ser divisible entre 5 y 11, retornar true En caso de no ser divisible entre 5 y 11, retornar false */
+
+function multiple (numero) {
+  if (numero % 5 === 0 && numero % 11 === 0) {
+    return true
   } else {
-    return 'Consonante'
+    return false
   }
 }
 
-console.log(`La letra a es: ${letter('a')}`)
-console.log(`La letra h es: ${letter('h')}`)
+console.log(`El numero 55 es multiplo de 5 y de 11? ${multiple(55)}`)
+console.log(`El numero 3 es multiplo de 5 y de 11? ${multiple(3)}`)
