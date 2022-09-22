@@ -186,17 +186,36 @@
   Ten en cuenta que deben de ser iguales tanto en valor como tipo de dato.
 */
 
-const letra1 = 1
-const letra2 = 1
-const letra3 = '1'
+// const letra1 = 1
+// const letra2 = 1
+// const letra3 = '1'
 
-function isEqual (uno, dos) {
-  if (uno === dos) {
+// function isEqual (uno, dos) {
+//   if (uno === dos) {
+//     return true
+//   } else {
+//     return false
+//   }
+// }
+
+// console.log(`Los datos letra 1 y letra 2 son iguales? ${isEqual(letra1, letra2)}`)
+// console.log(`Los datos letra 1 y letra 3 son iguales? ${isEqual(letra1, letra3)}`)
+
+// Ejercicio 1️⃣2️⃣
+
+/*
+  Crea una función llamada isChristmas() que reciba como parámetro una fecha cualquiera (“dia-mes-año”), y verifica si dicha fecha corresponde a Navidad.
+    Retorna true. En caso de que sea Navidad.
+    Retorna false. En caso de no sea Navidad.
+*/
+
+function isChristmas (fecha) {
+  const newFecha = fecha
+  if (newFecha.includes('25-12')) {
     return true
   } else {
     return false
   }
 }
 
-console.log(`Los datos letra 1 y letra 2 son iguales? ${isEqual(letra1, letra2)}`)
-console.log(`Los datos letra 1 y letra 3 son iguales? ${isEqual(letra1, letra3)}`)
+console.log(`La fecha 25-12-2022 es navidad? ${isChristmas('25-12-2022')}`)
