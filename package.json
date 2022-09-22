@@ -1,0 +1,31 @@
+{
+  "name": "katas",
+  "version": "1.0.0",
+  "description": "Dev.f katas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alelsito/dev.f-katas.git"
+  },
+  "author": "Hugo Alejandro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alelsito/dev.f-katas/issues"
+  },
+  "homepage": "https://github.com/Alelsito/dev.f-katas#readme",
+  "dependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "devDependencies": {
+    "standard": "^17.0.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "./node_modules/standard/eslintrc.json"
+    ]
+  }
+}
