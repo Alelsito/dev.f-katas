@@ -209,13 +209,36 @@
     Retorna false. En caso de no sea Navidad.
 */
 
-function isChristmas (fecha) {
-  const newFecha = fecha
-  if (newFecha.includes('25-12')) {
-    return true
-  } else {
+// function isChristmas (fecha) {
+//   // const newFecha = fecha
+//   if (fecha.includes('25-12')) {
+//     return true
+//   } else {
+//     return false
+//   }
+// }
+
+// console.log(`La fecha 25-12-2022 es navidad? ${isChristmas('25-12-2022')}`)
+
+// Ejercicio 1️⃣3️⃣
+
+/*
+  Crea una función llamada isMinor() que recibe tres parámetros numéricos y evalúe:
+    En caso de que alguno de los números sea menor a 10 retorna true.
+    En caso de que ninguno de los números sean menores a 10 retorna false.
+*/
+
+// No convinced with the logic
+
+function isMinor (uno, dos, tres) {
+  if (uno <= 10 && dos <= 10 && tres <= 10) {
     return false
+  } else if (uno >= 10 || dos >= 10 || tres >= 10) {
+    return true
   }
 }
 
-console.log(`La fecha 25-12-2022 es navidad? ${isChristmas('25-12-2022')}`)
+console.log(`Los numeros 1, 5 y 9 retornan: ${isMinor(1, 5, 9)}`)
+console.log(`Los numeros 10, 3 y 4 retornan: ${isMinor(10, 3, 4)}`)
+console.log(`Los numeros 1, 30 y 4 retornan: ${isMinor(1, 30, 4)}`)
+console.log(`Los numeros 12, 39 y 48 retornan: ${isMinor(12, 39, 48)}`)
