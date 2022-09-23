@@ -228,17 +228,44 @@
     En caso de que ninguno de los números sean menores a 10 retorna false.
 */
 
-// No convinced with the logic
+// Not convinced with the logic
 
-function isMinor (uno, dos, tres) {
-  if (uno <= 10 && dos <= 10 && tres <= 10) {
-    return false
-  } else if (uno >= 10 || dos >= 10 || tres >= 10) {
-    return true
+// function isMinor (uno, dos, tres) {
+//   if (uno <= 10 && dos <= 10 && tres <= 10) {
+//     return false
+//   } else if (uno >= 10 || dos >= 10 || tres >= 10) {
+//     return true
+//   }
+// }
+
+// console.log(`Los numeros 1, 5 y 9 retornan: ${isMinor(1, 5, 9)}`)
+// console.log(`Los numeros 10, 3 y 4 retornan: ${isMinor(10, 3, 4)}`)
+// console.log(`Los numeros 1, 30 y 4 retornan: ${isMinor(1, 30, 4)}`)
+// console.log(`Los numeros 12, 39 y 48 retornan: ${isMinor(12, 39, 48)}`)
+
+// Ejercicio 1️⃣4️⃣
+
+/*
+  Crea una función llamada whichQuadrant(x,y) que reciba la coordenada de un punto en el plano cartesiano; es decir, recibe dos valores enteros x e y. Evalúe en qué cuadrante se ubica dicho punto.
+    Retorne Cuadrante I X > 0 , Y > 0
+    Retorne Cuadrante II X < 0 , Y > 0
+    Retorne Cuadrante III X < 0 , Y < 0
+    Retorne Cuadrante IV X > 0 , Y < 0
+*/
+
+function whichQuadrant (x, y) {
+  if (x > 0 && y > 0) {
+    return 'Cuadrante I'
+  } else if (x < 0 && y > 0) {
+    return 'Cuadrante II'
+  } else if (x < 0 && y < 0) {
+    return 'Cuadrante III'
+  } else if (x > 0 && y < 0) {
+    return 'Cuadrante IV'
   }
 }
 
-console.log(`Los numeros 1, 5 y 9 retornan: ${isMinor(1, 5, 9)}`)
-console.log(`Los numeros 10, 3 y 4 retornan: ${isMinor(10, 3, 4)}`)
-console.log(`Los numeros 1, 30 y 4 retornan: ${isMinor(1, 30, 4)}`)
-console.log(`Los numeros 12, 39 y 48 retornan: ${isMinor(12, 39, 48)}`)
+console.log(`Las cordenadas 2, 3 se encuentran en el cuadrante: ${whichQuadrant(2, 3)}`)
+console.log(`Las cordenadas -2, 3 se encuentran en el cuadrante: ${whichQuadrant(-2, 3)}`)
+console.log(`Las cordenadas -2, -3 se encuentran en el cuadrante: ${whichQuadrant(-2, -3)}`)
+console.log(`Las cordenadas 2, -3 se encuentran en el cuadrante: ${whichQuadrant(2, -3)}`)
