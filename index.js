@@ -279,16 +279,45 @@
     Si el sueldo es mayor o igual a 500, retorna “El empleado ‘nombre’, no recibirá aumento”
 */
 
-function payRise (sueldo, antiguedad, nombre) {
-  if (sueldo < 500 && antiguedad >= 10) {
-    return `El empleado ${nombre}, recibirá un aumento del 20%`
-  } else if (sueldo < 500 && antiguedad < 10) {
-    return `El empleado ${nombre}, recibirá un aumento del 5%`
-  } else if (sueldo >= 500) {
-    return `El empleado ${nombre}, no recibirá aumento`
+// function payRise (sueldo, antiguedad, nombre) {
+//   if (sueldo < 500 && antiguedad >= 10) {
+//     return `El empleado ${nombre}, recibirá un aumento del 20%`
+//   } else if (sueldo < 500 && antiguedad < 10) {
+//     return `El empleado ${nombre}, recibirá un aumento del 5%`
+//   } else if (sueldo >= 500) {
+//     return `El empleado ${nombre}, no recibirá aumento`
+//   }
+// }
+
+// console.log(`Sueldo de 400, 11 años de antigüedad, Juan:  ${payRise(400, 11, 'Juan')}`)
+// console.log(`Sueldo de 300, 9 años de antigüedad, Roberto:  ${payRise(300, 9, 'Roberto')}`)
+// console.log(`Sueldo de 900, 11 años de antigüedad, Maria:  ${payRise(900, 11, 'Maria')}`)
+
+// Ejercicio 1️⃣6️⃣
+
+/*
+  Crea una función llamada evaluateGrade() que reciba como parámetro una nota (número) y evalúe la calificación según la nota, retornando:
+    Si la nota se encuentra entre 0-3: Retorna Muy deficiente
+    Si la nota se encuentra entre 4-5: Retorna Insuficiente
+    Si la nota se encuentra entre 6-7: Retorna Bien
+    Si la nota se encuentra entre 8-9: Retorna Notable
+    Si la nota se encuentra entre 10: Retorna Sobresaliente
+*/
+
+function evaluateGrade (nota) {
+  if (nota >= 0 && nota <= 3) {
+    return 'Muy deficiente'
+  } else if (nota >= 4 && nota <= 5) {
+    return 'Insuficiente'
+  } else if (nota >= 6 && nota <= 7) {
+    return 'Bien'
+  } else if (nota >= 8 && nota <= 9) {
+    return 'Notable'
+  } else if (nota === 10) {
+    return 'Sobresaliente'
   }
 }
 
-console.log(`Sueldo de 400, 11 años de antigüedad, Juan:  ${payRise(400, 11, 'Juan')}`)
-console.log(`Sueldo de 300, 9 años de antigüedad, Roberto:  ${payRise(300, 9, 'Roberto')}`)
-console.log(`Sueldo de 900, 11 años de antigüedad, Maria:  ${payRise(900, 11, 'Maria')}`)
+console.log(`Probar la nota 0: ${evaluateGrade(0)}`)
+console.log(`Probar la nota 6: ${evaluateGrade(6)}`)
+console.log(`Probar la nota 9: ${evaluateGrade(9)}`)
