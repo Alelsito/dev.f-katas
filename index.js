@@ -330,19 +330,48 @@
     Retorna Un dígito, en caso de que tenga un dígito decimal.
 */
 
-function digits (numero) {
-  if (typeof numero !== 'number') {
+// function digits (numero) {
+//   if (typeof numero !== 'number') {
+//     return null
+//   } else {
+//     numero = String(numero).split('.')[1]
+//     if (numero.length === 1) {
+//       return 'Un dígito'
+//     } else if (numero.length === 2) {
+//       return 'Dos dígitos'
+//     }
+//   }
+// }
+
+// console.log(`El numero 1.24: ${digits(1.24)}`)
+// console.log(`El numero 404.4: ${digits(404.4)}`)
+// console.log(`El numero 98.02: ${digits(98.02)}`)
+
+// Ejercicio 1️⃣8️⃣
+
+/*
+  Crea una variable llamada idioma, que contenga un array con tres elementos, ‘Español’, ’Inglés’, ’Francés’. Posteriormente crea una función llamada saludo(), que reciba como parámetros un idioma ‘Español’, ’Inglés’, ’Francés’. Y que retorne:
+    Retorne Hola hacker, en caso de elegir Español
+    Retorne Hello hacker, en caso de elegir Inglés
+    Retorne Bonjour hacker, en caso de elegir Francés
+*/
+
+const idioma = ['Español', 'Inglés', 'Francés']
+
+function saludo (seleccion) {
+  if (typeof (seleccion) !== 'string') {
     return null
-  } else {
-    numero = String(numero).split('.')[1]
-    if (numero.length === 1) {
-      return 'Un dígito'
-    } else if (numero.length === 2) {
-      return 'Dos dígitos'
-    }
+  }
+
+  if (seleccion === idioma[0]) {
+    return 'Hola hacker'
+  } else if (seleccion === idioma[1]) {
+    return 'Hello hacker'
+  } else if (seleccion === idioma[2]) {
+    return 'Bonjour hacker'
   }
 }
 
-console.log(`El numero 1.24: ${digits(1.24)}`)
-console.log(`El numero 404.4: ${digits(404.4)}`)
-console.log(`El numero 98.02: ${digits(98.02)}`)
+console.log(`Probar Español: ${saludo(idioma[0])}`)
+console.log(`Probar Inglés: ${saludo(idioma[1])}`)
+console.log(`Probar Francés: ${saludo(idioma[2])}`)
