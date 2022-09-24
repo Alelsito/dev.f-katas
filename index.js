@@ -304,20 +304,45 @@
     Si la nota se encuentra entre 10: Retorna Sobresaliente
 */
 
-function evaluateGrade (nota) {
-  if (nota >= 0 && nota <= 3) {
-    return 'Muy deficiente'
-  } else if (nota >= 4 && nota <= 5) {
-    return 'Insuficiente'
-  } else if (nota >= 6 && nota <= 7) {
-    return 'Bien'
-  } else if (nota >= 8 && nota <= 9) {
-    return 'Notable'
-  } else if (nota === 10) {
-    return 'Sobresaliente'
+// function evaluateGrade (nota) {
+//   if (nota >= 0 && nota <= 3) {
+//     return 'Muy deficiente'
+//   } else if (nota >= 4 && nota <= 5) {
+//     return 'Insuficiente'
+//   } else if (nota >= 6 && nota <= 7) {
+//     return 'Bien'
+//   } else if (nota >= 8 && nota <= 9) {
+//     return 'Notable'
+//   } else if (nota === 10) {
+//     return 'Sobresaliente'
+//   }
+// }
+
+// console.log(`Probar la nota 0: ${evaluateGrade(0)}`)
+// console.log(`Probar la nota 6: ${evaluateGrade(6)}`)
+// console.log(`Probar la nota 9: ${evaluateGrade(9)}`)
+
+// Ejercicio 1️⃣7️⃣
+
+/*
+  Crea una función llamada digits() que recibe como parámetro un número positivo de uno o dos dígitos decimales (3.45), evalúe si el número tiene uno o dos dígitos decimales.
+    Retorne Dos dígitos, en caso de que tenga dos dígitos decimales.
+    Retorna Un dígito, en caso de que tenga un dígito decimal.
+*/
+
+function digits (numero) {
+  if (typeof numero !== 'number') {
+    return null
+  } else {
+    numero = String(numero).split('.')[1]
+    if (numero.length === 1) {
+      return 'Un dígito'
+    } else if (numero.length === 2) {
+      return 'Dos dígitos'
+    }
   }
 }
 
-console.log(`Probar la nota 0: ${evaluateGrade(0)}`)
-console.log(`Probar la nota 6: ${evaluateGrade(6)}`)
-console.log(`Probar la nota 9: ${evaluateGrade(9)}`)
+console.log(`El numero 1.24: ${digits(1.24)}`)
+console.log(`El numero 404.4: ${digits(404.4)}`)
+console.log(`El numero 98.02: ${digits(98.02)}`)
