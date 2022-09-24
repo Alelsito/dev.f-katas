@@ -253,19 +253,42 @@
     Retorne Cuadrante IV X > 0 , Y < 0
 */
 
-function whichQuadrant (x, y) {
-  if (x > 0 && y > 0) {
-    return 'Cuadrante I'
-  } else if (x < 0 && y > 0) {
-    return 'Cuadrante II'
-  } else if (x < 0 && y < 0) {
-    return 'Cuadrante III'
-  } else if (x > 0 && y < 0) {
-    return 'Cuadrante IV'
+// function whichQuadrant (x, y) {
+//   if (x > 0 && y > 0) {
+//     return 'Cuadrante I'
+//   } else if (x < 0 && y > 0) {
+//     return 'Cuadrante II'
+//   } else if (x < 0 && y < 0) {
+//     return 'Cuadrante III'
+//   } else if (x > 0 && y < 0) {
+//     return 'Cuadrante IV'
+//   }
+// }
+
+// console.log(`Las cordenadas 2, 3 se encuentran en el cuadrante: ${whichQuadrant(2, 3)}`)
+// console.log(`Las cordenadas -2, 3 se encuentran en el cuadrante: ${whichQuadrant(-2, 3)}`)
+// console.log(`Las cordenadas -2, -3 se encuentran en el cuadrante: ${whichQuadrant(-2, -3)}`)
+// console.log(`Las cordenadas 2, -3 se encuentran en el cuadrante: ${whichQuadrant(2, -3)}`)
+
+// Ejercicio 1️⃣5️⃣
+
+/*
+  Necesitamos saber si un empleado recibirá un aumento. Crea una función llamada payRise() que reciba como parámetros sueldo, años de antigüedad y nombre del empleado. Con esos datos evalúe si:
+    Si el sueldo es menor a 500 y su antigüedad es igual o mayor a 10 años, retorna “El empleado ‘nombre’, recibirá un aumento del 20%”
+    Si el sueldo es menor a 500 y su antigüedad es menor a 10 años, retorna “El empleado ‘nombre’, recibirá un aumento del 5%”
+    Si el sueldo es mayor o igual a 500, retorna “El empleado ‘nombre’, no recibirá aumento”
+*/
+
+function payRise (sueldo, antiguedad, nombre) {
+  if (sueldo < 500 && antiguedad >= 10) {
+    return `El empleado ${nombre}, recibirá un aumento del 20%`
+  } else if (sueldo < 500 && antiguedad < 10) {
+    return `El empleado ${nombre}, recibirá un aumento del 5%`
+  } else if (sueldo >= 500) {
+    return `El empleado ${nombre}, no recibirá aumento`
   }
 }
 
-console.log(`Las cordenadas 2, 3 se encuentran en el cuadrante: ${whichQuadrant(2, 3)}`)
-console.log(`Las cordenadas -2, 3 se encuentran en el cuadrante: ${whichQuadrant(-2, 3)}`)
-console.log(`Las cordenadas -2, -3 se encuentran en el cuadrante: ${whichQuadrant(-2, -3)}`)
-console.log(`Las cordenadas 2, -3 se encuentran en el cuadrante: ${whichQuadrant(2, -3)}`)
+console.log(`Sueldo de 400, 11 años de antigüedad, Juan:  ${payRise(400, 11, 'Juan')}`)
+console.log(`Sueldo de 300, 9 años de antigüedad, Roberto:  ${payRise(300, 9, 'Roberto')}`)
+console.log(`Sueldo de 900, 11 años de antigüedad, Maria:  ${payRise(900, 11, 'Maria')}`)
