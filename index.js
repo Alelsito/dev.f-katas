@@ -48,6 +48,8 @@
         - "Cero" si el número es cero.
 */
 
+// First way
+
 // function evaluate (number) {
 //   if (number > 0) {
 //     return 'Positivo'
@@ -58,9 +60,22 @@
 //   }
 // }
 
-// console.log(`El numero 20 es: ${evaluate(20)}`)
-// console.log(`El numero -38 es: ${evaluate(-38)}`)
-// console.log(`El numero 0 es: ${evaluate(0)}`)
+// Second way (with Math.sign +1, -1, 0)
+
+function evaluate (numero) {
+  const sign = Math.sign(numero)
+  if (sign === 1) {
+    return 'Positivo'
+  } else if (sign === -1) {
+    return 'Negativo'
+  } else if (sign === 0) {
+    return 'Cero'
+  }
+}
+
+console.log(`El numero 20 es: ${evaluate(20)}`)
+console.log(`El numero -38 es: ${evaluate(-38)}`)
+console.log(`El numero 0 es: ${evaluate(0)}`)
 
 // Ejercicio 6️⃣
 /* Crear un ciclo for o while que almacene en un array llamado pares los numeros pares que hay entre el 0 y el 100, empezando desde 0 */
@@ -401,12 +416,12 @@
   Crea una función llamada numbers() que retorne un array donde se visualicen los números del 1 al 10, y a la vez, una cuenta inversa de 10 a 1
 */
 
-function number () {
-  const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-  const arrayReverse = [...array]
-  arrayReverse.reverse()
-  arrayReverse.map((e) => array.push(e))
-  return array
-}
+// function number () {
+//   const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+//   const arrayReverse = [...array]
+//   arrayReverse.reverse()
+//   arrayReverse.map((e) => array.push(e))
+//   return array
+// }
 
-console.log(number())
+// console.log(number())
