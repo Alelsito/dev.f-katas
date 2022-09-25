@@ -383,14 +383,30 @@
     [1,2,3,4,5,6,7,8,9,10] →[10,9,8,7,6,5,4,3,2,1]
 */
 
-const array1 = [2, 5, 6, 8, 3, 4, 9]
-const array2 = [20, 56, 89, 3, 4, 789]
-const array3 = [34, 56, 72, 12, 678, 234]
+// const array1 = [2, 5, 6, 8, 3, 4, 9]
+// const array2 = [20, 56, 89, 3, 4, 789]
+// const array3 = [34, 56, 72, 12, 678, 234]
 
-function numbersBackwards (array) {
-  return array.reverse()
+// function numbersBackwards (array) {
+//   return array.reverse()
+// }
+
+// console.log(`El siguiente arrat ${array1}, en forma invertida es: ${numbersBackwards(array1)}`)
+// console.log(`El siguiente arrat ${array2}, en forma invertida es: ${numbersBackwards(array2)}`)
+// console.log(`El siguiente arrat ${array3}, en forma invertida es: ${numbersBackwards(array3)}`)
+
+// Ejercicio 2️⃣0️⃣
+
+/*
+  Crea una función llamada numbers() que retorne un array donde se visualicen los números del 1 al 10, y a la vez, una cuenta inversa de 10 a 1
+*/
+
+function number () {
+  const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  const arrayReverse = [...array]
+  arrayReverse.reverse()
+  arrayReverse.map((e) => array.push(e))
+  return array
 }
 
-console.log(`El siguiente arrat ${array1}, en forma invertida es: ${numbersBackwards(array1)}`)
-console.log(`El siguiente arrat ${array2}, en forma invertida es: ${numbersBackwards(array2)}`)
-console.log(`El siguiente arrat ${array3}, en forma invertida es: ${numbersBackwards(array3)}`)
+console.log(number())
