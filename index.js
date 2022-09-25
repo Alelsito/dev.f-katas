@@ -356,22 +356,41 @@
     Retorne Bonjour hacker, en caso de elegir Francés
 */
 
-const idioma = ['Español', 'Inglés', 'Francés']
+// const idioma = ['Español', 'Inglés', 'Francés']
 
-function saludo (seleccion) {
-  if (typeof (seleccion) !== 'string') {
-    return null
-  }
+// function saludo (seleccion) {
+//   if (typeof (seleccion) !== 'string') {
+//     return null
+//   }
 
-  if (seleccion === idioma[0]) {
-    return 'Hola hacker'
-  } else if (seleccion === idioma[1]) {
-    return 'Hello hacker'
-  } else if (seleccion === idioma[2]) {
-    return 'Bonjour hacker'
-  }
+//   if (seleccion === idioma[0]) {
+//     return 'Hola hacker'
+//   } else if (seleccion === idioma[1]) {
+//     return 'Hello hacker'
+//   } else if (seleccion === idioma[2]) {
+//     return 'Bonjour hacker'
+//   }
+// }
+
+// console.log(`Probar Español: ${saludo(idioma[0])}`)
+// console.log(`Probar Inglés: ${saludo(idioma[1])}`)
+// console.log(`Probar Francés: ${saludo(idioma[2])}`)
+
+// Ejercicio 1️⃣9️⃣
+
+/*
+  Crea una función llamada numbersBackwards() que reciba un array de números y retorne los números en orden inverso. Ejemplo:
+    [1,2,3,4,5,6,7,8,9,10] →[10,9,8,7,6,5,4,3,2,1]
+*/
+
+const array1 = [2, 5, 6, 8, 3, 4, 9]
+const array2 = [20, 56, 89, 3, 4, 789]
+const array3 = [34, 56, 72, 12, 678, 234]
+
+function numbersBackwards (array) {
+  return array.reverse()
 }
 
-console.log(`Probar Español: ${saludo(idioma[0])}`)
-console.log(`Probar Inglés: ${saludo(idioma[1])}`)
-console.log(`Probar Francés: ${saludo(idioma[2])}`)
+console.log(`El siguiente arrat ${array1}, en forma invertida es: ${numbersBackwards(array1)}`)
+console.log(`El siguiente arrat ${array2}, en forma invertida es: ${numbersBackwards(array2)}`)
+console.log(`El siguiente arrat ${array3}, en forma invertida es: ${numbersBackwards(array3)}`)
