@@ -62,20 +62,20 @@
 
 // Second way (with Math.sign +1, -1, 0)
 
-function evaluate (numero) {
-  const sign = Math.sign(numero)
-  if (sign === 1) {
-    return 'Positivo'
-  } else if (sign === -1) {
-    return 'Negativo'
-  } else if (sign === 0) {
-    return 'Cero'
-  }
-}
+// function evaluate (numero) {
+//   const sign = Math.sign(numero)
+//   if (sign === 1) {
+//     return 'Positivo'
+//   } else if (sign === -1) {
+//     return 'Negativo'
+//   } else if (sign === 0) {
+//     return 'Cero'
+//   }
+// }
 
-console.log(`El numero 20 es: ${evaluate(20)}`)
-console.log(`El numero -38 es: ${evaluate(-38)}`)
-console.log(`El numero 0 es: ${evaluate(0)}`)
+// console.log(`El numero 20 es: ${evaluate(20)}`)
+// console.log(`El numero -38 es: ${evaluate(-38)}`)
+// console.log(`El numero 0 es: ${evaluate(0)}`)
 
 // Ejercicio 6️⃣
 /* Crear un ciclo for o while que almacene en un array llamado pares los numeros pares que hay entre el 0 y el 100, empezando desde 0 */
@@ -111,6 +111,8 @@ console.log(`El numero 0 es: ${evaluate(0)}`)
     - "Consonante" si la letra es una consonante
 */
 
+// First way
+
 // function letter (letra) {
 //   if (letra === 'a' || letra === 'e' || letra === 'i' || letra === 'o' || letra === 'u') {
 //     return 'Vocal'
@@ -119,8 +121,18 @@ console.log(`El numero 0 es: ${evaluate(0)}`)
 //   }
 // }
 
-// console.log(`La letra a es: ${letter('a')}`)
-// console.log(`La letra h es: ${letter('h')}`)
+// Second way (with includes)
+
+function letter (character) {
+  if (character.includes('a') || character.includes('e') || character.includes('i') || character.includes('o') || character.includes('u')) {
+    return 'Vocal'
+  } else {
+    return 'Consonante'
+  }
+}
+
+console.log(`La letra a es: ${letter('a')}`)
+console.log(`La letra h es: ${letter('h')}`)
 
 // Ejercicio 8️⃣
 
