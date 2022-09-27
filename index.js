@@ -452,8 +452,23 @@
   Resultado: Hay 6 personas en el equipo de formación. Ellos son: Amalia,Karla,Silvana,Manu,Jonh,Mike.
 */
 
-function teamName (nombre, array) {
-  return `Hay ${array.length} personas en el equipo de ${nombre}. Ellos son: ${array.map((e) => e)}.`
+// function teamName (nombre, array) {
+//   return `Hay ${array.length} personas en el equipo de ${nombre}. Ellos son: ${array.map((e) => e)}.`
+// }
+
+// console.log(`Probar América, [Orive Peralta, Memo Ochoa, Cabañas, Roberto Becerra]: ${teamName('América', ['Orive Peralta', 'Memo Ochoa', 'Cabañas', 'Roberto Becerra'])}`)
+
+// Ejercicio 2️⃣2️⃣
+
+/*
+  Crea una función llamada square() que reciba como parámetro un arreglo de números positivos y que retorne los elementos elevados al cuadrado
+  NOTA: puedes utilizar map()
+*/
+
+function square (array) {
+  return array.map((e) => e * e)
 }
 
-console.log(`Probar América, [Orive Peralta, Memo Ochoa, Cabañas, Roberto Becerra]: ${teamName('América', ['Orive Peralta', 'Memo Ochoa', 'Cabañas', 'Roberto Becerra'])}`)
+console.log(`El array [1, 2, 3, 4] con cada elemento al cuadrado es: ${square([1, 2, 3, 4])}`)
+console.log(`El array [40, 78, 19] con cada elemento al cuadrado es: ${square([40, 78, 19])}`)
+console.log(`El array [4, 6, 9, 10] con cada elemento al cuadrado es: ${square([4, 6, 9, 10])}`)
