@@ -465,10 +465,37 @@
   NOTA: puedes utilizar map()
 */
 
-function square (array) {
-  return array.map((e) => e * e)
+// function square (array) {
+//   return array.map((e) => e * e)
+// }
+
+// console.log(`El array [1, 2, 3, 4] con cada elemento al cuadrado es: ${square([1, 2, 3, 4])}`)
+// console.log(`El array [40, 78, 19] con cada elemento al cuadrado es: ${square([40, 78, 19])}`)
+// console.log(`El array [4, 6, 9, 10] con cada elemento al cuadrado es: ${square([4, 6, 9, 10])}`)
+
+// Ejercicio 2️⃣3️⃣
+
+/*
+  Crea una función llamada promedio() que reciba como parámetro un arreglo de números positivos, retorna el promedio de todos los elementos
+  NOTA: puedes utilizar forOf()
+*/
+
+function promedio (array) {
+  const initialValue = 0
+  const sum = array.reduce(
+    (previousValue, currentValue) => previousValue + currentValue,
+    initialValue
+  )
+  return sum / array.length
 }
 
-console.log(`El array [1, 2, 3, 4] con cada elemento al cuadrado es: ${square([1, 2, 3, 4])}`)
-console.log(`El array [40, 78, 19] con cada elemento al cuadrado es: ${square([40, 78, 19])}`)
-console.log(`El array [4, 6, 9, 10] con cada elemento al cuadrado es: ${square([4, 6, 9, 10])}`)
+function promedio1 (array) {
+  let sum = 0
+  for (const num of array) {
+    sum += num
+  }
+  return sum / array.length
+}
+
+console.log(`${promedio([1, 2, 3, 4])}`)
+console.log(`${promedio1([1, 2, 3, 4])}`)
