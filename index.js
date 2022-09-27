@@ -123,16 +123,16 @@
 
 // Second way (with includes)
 
-function letter (character) {
-  if (character.includes('a') || character.includes('e') || character.includes('i') || character.includes('o') || character.includes('u')) {
-    return 'Vocal'
-  } else {
-    return 'Consonante'
-  }
-}
+// function letter (character) {
+//   if (character.includes('a') || character.includes('e') || character.includes('i') || character.includes('o') || character.includes('u')) {
+//     return 'Vocal'
+//   } else {
+//     return 'Consonante'
+//   }
+// }
 
-console.log(`La letra a es: ${letter('a')}`)
-console.log(`La letra h es: ${letter('h')}`)
+// console.log(`La letra a es: ${letter('a')}`)
+// console.log(`La letra h es: ${letter('h')}`)
 
 // Ejercicio 8️⃣
 
@@ -437,3 +437,23 @@ console.log(`La letra h es: ${letter('h')}`)
 // }
 
 // console.log(number())
+
+// Ejercicio 2️⃣1️⃣
+
+/*
+  Crea una función llamada teamName() que recibirá dos parámetros,
+    El primero será el nombre de equipo (string) y
+    El segundo será un array con el nombre de los integrantes.
+  Retorna el siguiente mensaje con los parámetros. Hay “número de integrantes” personas en el equipo de “Nombre del equipo”. Ellos son: “Integrantes del equipo”
+  Ejemplo:
+  Datos de entrada:
+    teamName: 'formación'
+    people: [ 'Amalia', 'Karla', 'Silvana', 'Manu', 'Jonh', 'Mike'],
+  Resultado: Hay 6 personas en el equipo de formación. Ellos son: Amalia,Karla,Silvana,Manu,Jonh,Mike.
+*/
+
+function teamName (nombre, array) {
+  return `Hay ${array.length} personas en el equipo de ${nombre}. Ellos son: ${array.map((e) => e)}.`
+}
+
+console.log(`Probar América, [Orive Peralta, Memo Ochoa, Cabañas, Roberto Becerra]: ${teamName('América', ['Orive Peralta', 'Memo Ochoa', 'Cabañas', 'Roberto Becerra'])}`)
