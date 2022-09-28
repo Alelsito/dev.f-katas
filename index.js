@@ -480,22 +480,37 @@
   NOTA: puedes utilizar forOf()
 */
 
-function promedio (array) {
-  const initialValue = 0
-  const sum = array.reduce(
-    (previousValue, currentValue) => previousValue + currentValue,
-    initialValue
-  )
-  return sum / array.length
+// function promedio (array) {
+//   const initialValue = 0
+//   const sum = array.reduce(
+//     (previousValue, currentValue) => previousValue + currentValue,
+//     initialValue
+//   )
+//   return sum / array.length
+// }
+
+// function promedio1 (array) {
+//   let sum = 0
+//   for (const num of array) {
+//     sum += num
+//   }
+//   return sum / array.length
+// }
+
+// console.log(`${promedio([1, 2, 3, 4])}`)
+// console.log(`${promedio1([1, 2, 3, 4])}`)
+
+// Ejercicio 2️⃣4️⃣
+
+/*
+  Crea una función llamada farenheitToCelsius() que reciba como parametro los grados farenheit y los convierta a grados centígrados.
+*/
+
+function farenheitToCelsius (grados) {
+  const centigrados = (grados - 32) * (5 / 9)
+  return centigrados
 }
 
-function promedio1 (array) {
-  let sum = 0
-  for (const num of array) {
-    sum += num
-  }
-  return sum / array.length
-}
-
-console.log(`${promedio([1, 2, 3, 4])}`)
-console.log(`${promedio1([1, 2, 3, 4])}`)
+console.log(`25 grados Farenhei a Centigrados son: ${farenheitToCelsius(25)}`)
+console.log(`40 grados Farenhei a Centigrados son: ${farenheitToCelsius(40)}`)
+console.log(`36 grados Farenhei a Centigrados son: ${farenheitToCelsius(36)}`)
