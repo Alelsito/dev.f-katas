@@ -506,11 +506,32 @@
   Crea una función llamada farenheitToCelsius() que reciba como parametro los grados farenheit y los convierta a grados centígrados.
 */
 
-function farenheitToCelsius (grados) {
-  const centigrados = (grados - 32) * (5 / 9)
-  return centigrados
+// function farenheitToCelsius (grados) {
+//   const centigrados = (grados - 32) * (5 / 9)
+//   return centigrados
+// }
+
+// console.log(`25 grados Farenhei a Centigrados son: ${farenheitToCelsius(25)}`)
+// console.log(`40 grados Farenhei a Centigrados son: ${farenheitToCelsius(40)}`)
+// console.log(`36 grados Farenhei a Centigrados son: ${farenheitToCelsius(36)}`)
+
+// Ejercicio 2️⃣5️⃣
+
+/*
+  Crea una función llamada evaluateLetter() que reciba como parámetro cualquier letra del alfabeto y verifique si es vocal o consonante.
+    En caso de ser vocal, devolver "Vocal"
+    En caso de ser consonante, devolver "Consonante
+*/
+
+function evaluateLetter (letter) {
+  if (letter.includes('a') || letter.includes('e') || letter.includes('i') || letter.includes('o') || letter.includes('u')) {
+    return 'Vocal'
+  } else {
+    return 'Consonante'
+  }
 }
 
-console.log(`25 grados Farenhei a Centigrados son: ${farenheitToCelsius(25)}`)
-console.log(`40 grados Farenhei a Centigrados son: ${farenheitToCelsius(40)}`)
-console.log(`36 grados Farenhei a Centigrados son: ${farenheitToCelsius(36)}`)
+console.log(`La letra i es: ${evaluateLetter('i')}`)
+console.log(`La letra u es: ${evaluateLetter('u')}`)
+console.log(`La letra h es: ${evaluateLetter('h')}`)
+console.log(`La letra p es: ${evaluateLetter('p')}`)
