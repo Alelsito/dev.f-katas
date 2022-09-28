@@ -542,10 +542,30 @@
   Crea una función llamada decimalToBinary() que reciba como parámetro un número entero decimal y lo convierta en un número binario retornando su resultado.
 */
 
-function decimalToBinary (num) {
-  return num.toString(2)
+// function decimalToBinary (num) {
+//   return num.toString(2)
+// }
+
+// console.log(`El numero 5 a binario es: ${decimalToBinary(5)}`)
+// console.log(`El numero 67 a binario es: ${decimalToBinary(67)}`)
+// console.log(`El numero 181 a binario es: ${decimalToBinary(181)}`)
+
+// Ejercicio 2️⃣7️⃣
+
+/*
+  Crea una función llamada evaluateNumber() que reciba como parámetro un número para evaluar si un número es divisible entre 5 y 11 o no lo es.
+    En caso de ser divisible entre 5 y 11, retornar true
+    En caso de no ser divisible entre 5 y 11, retornar false
+*/
+
+function evaluateNumber (num) {
+  if (num % 5 === 0 && num % 11 === 0) {
+    return true
+  } else {
+    return false
+  }
 }
 
-console.log(`El numero 5 a binario es: ${decimalToBinary(5)}`)
-console.log(`El numero 67 a binario es: ${decimalToBinary(67)}`)
-console.log(`El numero 181 a binario es: ${decimalToBinary(181)}`)
+console.log(`El numero 55 es divisible entre 5 y 11?: ${evaluateNumber(55)}`)
+console.log(`El numero 2 es divisible entre 5 y 11?: ${evaluateNumber(2)}`)
+console.log(`El numero 3 es divisible entre 5 y 11?: ${evaluateNumber(3)}`)
