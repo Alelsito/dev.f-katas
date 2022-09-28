@@ -558,14 +558,35 @@
     En caso de no ser divisible entre 5 y 11, retornar false
 */
 
-function evaluateNumber (num) {
-  if (num % 5 === 0 && num % 11 === 0) {
+// function evaluateNumber (num) {
+//   if (num % 5 === 0 && num % 11 === 0) {
+//     return true
+//   } else {
+//     return false
+//   }
+// }
+
+// console.log(`El numero 55 es divisible entre 5 y 11?: ${evaluateNumber(55)}`)
+// console.log(`El numero 2 es divisible entre 5 y 11?: ${evaluateNumber(2)}`)
+// console.log(`El numero 3 es divisible entre 5 y 11?: ${evaluateNumber(3)}`)
+
+// Ejercicio 2️⃣8️⃣
+
+/*
+  Crea una función llamada palindrome() que reciba como parametro una oración, si la oración es un palíndromo la función deberá devolver true en otro caso, devolver false
+*/
+
+function palindrome (str) {
+  const re = /[\W_]/g
+  const lowRegStr = str.toLowerCase().replace(re, '')
+  const reverseStr = lowRegStr.split('').reverse().join('')
+  if (reverseStr === lowRegStr) {
     return true
   } else {
     return false
   }
 }
 
-console.log(`El numero 55 es divisible entre 5 y 11?: ${evaluateNumber(55)}`)
-console.log(`El numero 2 es divisible entre 5 y 11?: ${evaluateNumber(2)}`)
-console.log(`El numero 3 es divisible entre 5 y 11?: ${evaluateNumber(3)}`)
+console.log(`La palabra reconocer es palindroma?: ${palindrome('reconocer')}`)
+console.log(`La palabra corazon es palindroma?: ${palindrome('corazon')}`)
+console.log(`La fecha 02/02/2020 es palindroma?: ${palindrome('02/02/2020')}`)
