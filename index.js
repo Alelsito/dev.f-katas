@@ -523,15 +523,29 @@
     En caso de ser consonante, devolver "Consonante
 */
 
-function evaluateLetter (letter) {
-  if (letter.includes('a') || letter.includes('e') || letter.includes('i') || letter.includes('o') || letter.includes('u')) {
-    return 'Vocal'
-  } else {
-    return 'Consonante'
-  }
+// function evaluateLetter (letter) {
+//   if (letter.includes('a') || letter.includes('e') || letter.includes('i') || letter.includes('o') || letter.includes('u')) {
+//     return 'Vocal'
+//   } else {
+//     return 'Consonante'
+//   }
+// }
+
+// console.log(`La letra i es: ${evaluateLetter('i')}`)
+// console.log(`La letra u es: ${evaluateLetter('u')}`)
+// console.log(`La letra h es: ${evaluateLetter('h')}`)
+// console.log(`La letra p es: ${evaluateLetter('p')}`)
+
+// Ejercicio 2️⃣6️⃣
+
+/*
+  Crea una función llamada decimalToBinary() que reciba como parámetro un número entero decimal y lo convierta en un número binario retornando su resultado.
+*/
+
+function decimalToBinary (num) {
+  return num.toString(2)
 }
 
-console.log(`La letra i es: ${evaluateLetter('i')}`)
-console.log(`La letra u es: ${evaluateLetter('u')}`)
-console.log(`La letra h es: ${evaluateLetter('h')}`)
-console.log(`La letra p es: ${evaluateLetter('p')}`)
+console.log(`El numero 5 a binario es: ${decimalToBinary(5)}`)
+console.log(`El numero 67 a binario es: ${decimalToBinary(67)}`)
+console.log(`El numero 181 a binario es: ${decimalToBinary(181)}`)
