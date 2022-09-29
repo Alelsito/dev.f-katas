@@ -576,17 +576,42 @@
   Crea una función llamada palindrome() que reciba como parametro una oración, si la oración es un palíndromo la función deberá devolver true en otro caso, devolver false
 */
 
-function palindrome (str) {
-  const re = /[\W_]/g
-  const lowRegStr = str.toLowerCase().replace(re, '')
-  const reverseStr = lowRegStr.split('').reverse().join('')
-  if (reverseStr === lowRegStr) {
-    return true
-  } else {
-    return false
+// function palindrome (str) {
+//   const re = /[\W_]/g
+//   const lowRegStr = str.toLowerCase().replace(re, '')
+//   const reverseStr = lowRegStr.split('').reverse().join('')
+//   if (reverseStr === lowRegStr) {
+//     return true
+//   } else {
+//     return false
+//   }
+// }
+
+// console.log(`La palabra reconocer es palindroma?: ${palindrome('reconocer')}`)
+// console.log(`La palabra corazon es palindroma?: ${palindrome('corazon')}`)
+// console.log(`La fecha 02/02/2020 es palindroma?: ${palindrome('02/02/2020')}`)
+
+// Ejercicio 2️⃣9️⃣
+
+/*
+  Crea una función llamada longestCountry(), esta función recibirá de parámetro un arreglo con nombres de distintos países, la función deberá retornar el país con mayor número de letras.
+    Por ejemplo, del siguiente arreglo de países:
+      const paises = ["México", "Panamá", "Guatemala", "El Salvador"]
+      El Salvador es el país con mayor número de letras.
+*/
+
+function longestCountry (array) {
+  let countryLenght = 0
+  let longestC
+
+  for (const country of array) {
+    if (country.length > countryLenght) {
+      longestC = country
+      countryLenght = country.length
+    }
   }
+
+  return longestC
 }
 
-console.log(`La palabra reconocer es palindroma?: ${palindrome('reconocer')}`)
-console.log(`La palabra corazon es palindroma?: ${palindrome('corazon')}`)
-console.log(`La fecha 02/02/2020 es palindroma?: ${palindrome('02/02/2020')}`)
+console.log(longestCountry(['México', 'Panamá', 'Guatemala', 'El Salvador']))
