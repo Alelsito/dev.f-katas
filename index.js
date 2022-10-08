@@ -600,18 +600,33 @@
       El Salvador es el país con mayor número de letras.
 */
 
-function longestCountry (array) {
-  let countryLenght = 0
-  let longestC
+// function longestCountry (array) {
+//   let countryLenght = 0
+//   let longestC
 
-  for (const country of array) {
-    if (country.length > countryLenght) {
-      longestC = country
-      countryLenght = country.length
-    }
-  }
+//   for (const country of array) {
+//     if (country.length > countryLenght) {
+//       longestC = country
+//       countryLenght = country.length
+//     }
+//   }
 
-  return longestC
+//   return longestC
+// }
+
+// console.log(longestCountry(['México', 'Panamá', 'Guatemala', 'El Salvador']))
+
+// Ejercicio 3️⃣0️⃣
+
+/*
+  Crea una función llamada time() que calcule el tiempo necesario para que un automóvil que se mueve con una velocidad de 73000 m/h recorra una distancia de 120 km. (Tiempo = distancia/velocidad)
+*/
+
+function time () {
+  const km = 73000 / 1000 // Para los m/h a k/h
+  const distancia = 120 // En km
+  const tiempo = distancia / km // Formula para obtener el tiempo que tardara el auto
+  return parseFloat(tiempo.toFixed(2)) // ToFixed sirve para limitar los decimales a dos, sin embargo, regresa un string por lo que es necesario el parseFloat
 }
 
-console.log(longestCountry(['México', 'Panamá', 'Guatemala', 'El Salvador']))
+console.log(time())
