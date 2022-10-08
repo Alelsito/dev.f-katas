@@ -622,11 +622,40 @@
   Crea una función llamada time() que calcule el tiempo necesario para que un automóvil que se mueve con una velocidad de 73000 m/h recorra una distancia de 120 km. (Tiempo = distancia/velocidad)
 */
 
-function time () {
-  const km = 73000 / 1000 // Para los m/h a k/h
-  const distancia = 120 // En km
-  const tiempo = distancia / km // Formula para obtener el tiempo que tardara el auto
-  return parseFloat(tiempo.toFixed(2)) // ToFixed sirve para limitar los decimales a dos, sin embargo, regresa un string por lo que es necesario el parseFloat
+// function time () {
+//   const km = 73000 / 1000 // Para los m/h a k/h
+//   const distancia = 120 // En km
+//   const tiempo = distancia / km // Formula para obtener el tiempo que tardara el auto
+//   return parseFloat(tiempo.toFixed(2)) // ToFixed sirve para limitar los decimales a dos, sin embargo, regresa un string por lo que es necesario el parseFloat
+// }
+
+// console.log(time())
+
+// Ejercicio 3️⃣1️⃣
+
+/*
+  Crea una funcion llamada frequent() que recibirá de parámetro un arreglo con distintos números, retornar el elemento más frecuente dentro del arreglo.
+*/
+
+const array = [1, 5, 8, 9, 1, 5, 3, 5] // Ejemplo de array
+
+function frequent (array) {
+  let frequent = 0
+  let contador = 0
+  let cuenta = 0
+  // eslint-disable-next-line array-callback-return
+  array.map(f => {
+    cuenta = 0
+    // eslint-disable-next-line array-callback-return
+    array.map(s => {
+      if (f === s) { cuenta++ }
+    })
+    if (cuenta > contador) {
+      contador = cuenta
+      frequent = f
+    }
+  })
+  return frequent
 }
 
-console.log(time())
+console.log(frequent(array))
