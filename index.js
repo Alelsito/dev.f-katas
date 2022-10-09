@@ -637,25 +637,40 @@
   Crea una funcion llamada frequent() que recibirá de parámetro un arreglo con distintos números, retornar el elemento más frecuente dentro del arreglo.
 */
 
-const array = [1, 5, 8, 9, 1, 5, 3, 5] // Ejemplo de array
+// const array = [1, 5, 8, 9, 1, 5, 3, 5] // Ejemplo de array
 
-function frequent (array) {
-  let frequent = 0
-  let contador = 0
-  let cuenta = 0
-  // eslint-disable-next-line array-callback-return
-  array.map(f => {
-    cuenta = 0
-    // eslint-disable-next-line array-callback-return
-    array.map(s => {
-      if (f === s) { cuenta++ }
-    })
-    if (cuenta > contador) {
-      contador = cuenta
-      frequent = f
-    }
-  })
-  return frequent
+// function frequent (array) {
+//   let frequent = 0
+//   let contador = 0
+//   let cuenta = 0
+//   // eslint-disable-next-line array-callback-return
+//   array.map(f => {
+//     cuenta = 0
+//     // eslint-disable-next-line array-callback-return
+//     array.map(s => {
+//       if (f === s) { cuenta++ }
+//     })
+//     if (cuenta > contador) {
+//       contador = cuenta
+//       frequent = f
+//     }
+//   })
+//   return frequent
+// }
+
+// console.log(frequent(array))
+
+// Ejercicio 3️⃣1️⃣
+
+/*
+  Crea una función llamada cleanArray(), que elimine de un arreglo los siguientes elementos:
+    null, 0, "", false y undefined
+    La función debe retornar el arreglo sin los elementos anteriormente mencionados.
+*/
+
+function cleanArray (array) {
+  const filterArray = array.filter(Boolean)
+  return filterArray
 }
 
-console.log(frequent(array))
+console.log(cleanArray(['Perro', null, undefined, 2, 'Mangos', true, false]))
