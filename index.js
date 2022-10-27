@@ -759,15 +759,15 @@ Crea una funcion llamada petNames() A partir del siguiente arreglo de mascotas: 
   Crea una función llamada showMessaje() que devuelva "Este es mi mensaje dentro de un callback" mediante un callback.
 */
 
-function callback (param) {
-  return param
-}
+// function callback (param) {
+//   return param
+// }
 
-function showMessaje (call) {
-  return call('Este es mi mensaje dentro de un callback')
-}
+// function showMessaje (call) {
+//   return call('Este es mi mensaje dentro de un callback')
+// }
 
-console.log(showMessaje(callback))
+// console.log(showMessaje(callback))
 
 // Ejercicio 3️⃣6️⃣
 
@@ -779,17 +779,40 @@ console.log(showMessaje(callback))
   -> PEJELAGARTO
 */
 
-function superior (string, call) {
-  return call(string)
+// function superior (string, call) {
+//   return call(string)
+// }
+
+// function minus (string) {
+//   return string.toLowerCase()
+// }
+
+// function mayus (string) {
+//   return string.toUpperCase()
+// }
+
+// console.log(`String en mayus es: ${superior('Corazon', mayus)}`)
+// console.log(`String en minus es: ${superior('Corazon', minus)}`)
+
+// Ejercicio 3️⃣7️⃣
+
+class Triangulo {
+  constructor (baseline, height) {
+    this.baseline = baseline
+    this.height = height
+  }
+
+  perimeter = function () {
+    const perimeter = Math.hypot(this.baseline, this.height)
+    return parseInt(perimeter * 2)
+  }
+
+  surface = function () {
+    const surface = (this.baseline * this.height) / 2
+    return surface
+  }
 }
 
-function minus (string) {
-  return string.toLowerCase()
-}
+const trianguleOne = new Triangulo(2, 4)
 
-function mayus (string) {
-  return string.toUpperCase()
-}
-
-console.log(`String en mayus es: ${superior('Corazon', mayus)}`)
-console.log(`String en minus es: ${superior('Corazon', minus)}`)
+console.log(trianguleOne.perimeter(), trianguleOne.surface())
