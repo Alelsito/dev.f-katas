@@ -756,7 +756,7 @@ Crea una funcion llamada petNames() A partir del siguiente arreglo de mascotas: 
 // Ejercicio 3️⃣6️⃣
 
 /*
-Crea una función llamada showMessaje() que devuelva "Este es mi mensaje dentro de un callback" mediante un callback.
+  Crea una función llamada showMessaje() que devuelva "Este es mi mensaje dentro de un callback" mediante un callback.
 */
 
 function callback (param) {
@@ -768,3 +768,28 @@ function showMessaje (call) {
 }
 
 console.log(showMessaje(callback))
+
+// Ejercicio 3️⃣6️⃣
+
+/*
+  Escribe una función de orden superior llamada superior() que reciba una cadena de caracteres, debe devolver mediante un callback la cadena de caracteres en mayúsculas o en minúsculas.
+  Por ejemplo: superior("PejeLagarto", minus);
+  -> pejelagarto
+  superior("PejeLagarto", mayus);
+  -> PEJELAGARTO
+*/
+
+function superior (string, call) {
+  return call(string)
+}
+
+function minus (string) {
+  return string.toLowerCase()
+}
+
+function mayus (string) {
+  return string.toUpperCase()
+}
+
+console.log(`String en mayus es: ${superior('Corazon', mayus)}`)
+console.log(`String en minus es: ${superior('Corazon', minus)}`)
