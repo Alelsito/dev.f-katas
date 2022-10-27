@@ -710,20 +710,45 @@
 
 // console.log(myCollection.isRead())
 
-// Ejercicio 34
+// Ejercicio 3️⃣4️⃣
 
 /*
   Crea una función llamada determine que reciba como parámetro cualquier valor. La función debe retornar "string" "boolean" o "number" según el tipo de dato que reciba como parámetro.
 */
 
-function determine (value) {
-  if (typeof (value) === 'string') {
-    return 'string'
-  } else if (typeof (value) === 'boolean') {
-    return 'boolean'
-  } else if (typeof (value) === 'number') {
-    return 'number'
-  }
+// function determine (value) {
+//   if (typeof (value) === 'string') {
+//     return 'string'
+//   } else if (typeof (value) === 'boolean') {
+//     return 'boolean'
+//   } else if (typeof (value) === 'number') {
+//     return 'number'
+//   }
+// }
+
+// console.log(determine('ardilla'))
+
+// Ejercicio 3️⃣5️⃣
+
+/*
+Crea una funcion llamada petNames() A partir del siguiente arreglo de mascotas: const mascotas = [ { nombre: "Bimbo", especie: "Hamster", comidasFavoritas: ["Semillas", "Nueces"] }, { nombre: "Ludovico", especie: "Perro", comidasFavoritas: ["Huesos", "Jamon"] }, { nombre: "Pavlov", especie: "Perro", comidasFavoritas: ["Croquetas", "Pollo"] }, { nombre: "Chancla", especie: "Gato", comidasFavoritas: ["Atun", "Pescado"] }, { nombre: "Don Pepe", especie: "Perico", comidasFavoritas: ["Semillas"] } ]; Genera un nuevo arreglo que contenga los nombres de todas las mascotas.
+*/
+
+const mascotas = [
+  { nombre: 'Bimbo', especie: 'Hamster', comidasFavoritas: ['Semillas', 'Nueces'] },
+  { nombre: 'Ludovico', especie: 'Perro', comidasFavoritas: ['Huesos', 'Jamon'] },
+  { nombre: 'Pavlov', especie: 'Perro', comidasFavoritas: ['Croquetas', 'Pollo'] },
+  { nombre: 'Chancla', especie: 'Gato', comidasFavoritas: ['Atun', 'Pescado'] },
+  { nombre: 'Don Pepe', especie: 'Perico', comidasFavoritas: ['Semillas'] }
+]
+
+function petNames (array) {
+  const mascotasName = []
+  array.map(m => {
+    const name = m.nombre
+    mascotasName.push(name)
+  })
+  return mascotasName
 }
 
-console.log(determine('ardilla'))
+console.log(petNames(mascotas))
