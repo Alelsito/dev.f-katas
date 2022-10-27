@@ -668,9 +668,62 @@
     La función debe retornar el arreglo sin los elementos anteriormente mencionados.
 */
 
-function cleanArray (array) {
-  const filterArray = array.filter(Boolean)
-  return filterArray
+// function cleanArray (array) {
+//   const filterArray = array.filter(Boolean)
+//   return filterArray
+// }
+
+// console.log(cleanArray(['Perro', null, undefined, 2, 'Mangos', true, false]))
+
+// Ejercicio 3️⃣3️⃣
+
+/*
+  Crea un nuevo método para el siguiente objeto:
+  const myCollection = { books: [ { title: 'Cien Años de Soledad', author: 'Gabriel García Márquez', read: true }, { title: 'Do Androids Dream of Electric Sheep', author: 'Phillip K. Dick', read: false } ] };
+  El método debe llamarse isRead() que recibirá objeto con los atributos title, author y read.
+  Si el libro ha sido leído debe retornar:
+    "Ya has leido Cien Años de Soledad de Gabriel García Márquez"
+  Si el libro no ha sido leído debe retornar:
+    "Aún necesitas leer Do Androids Dream of Electric Sheep de Phillip K. Dick"
+*/
+
+// const myCollection = {
+//   books: [
+//     {
+//       title: 'Cien Años de Soledad',
+//       author: 'Gabriel García Márquez',
+//       read: true
+//     },
+//     {
+//       title: 'Do Androids Dream of Electric Sheep',
+//       author: 'Phillip K. Dick',
+//       read: false
+//     }
+//   ]
+// }
+
+// myCollection.isRead = function () {
+//   // console.log(myCollection.books)
+//   myCollection.books.map(e => {
+//   })
+// }
+
+// console.log(myCollection.isRead())
+
+// Ejercicio 34
+
+/*
+  Crea una función llamada determine que reciba como parámetro cualquier valor. La función debe retornar "string" "boolean" o "number" según el tipo de dato que reciba como parámetro.
+*/
+
+function determine (value) {
+  if (typeof (value) === 'string') {
+    return 'string'
+  } else if (typeof (value) === 'boolean') {
+    return 'boolean'
+  } else if (typeof (value) === 'number') {
+    return 'number'
+  }
 }
 
-console.log(cleanArray(['Perro', null, undefined, 2, 'Mangos', true, false]))
+console.log(determine('ardilla'))
