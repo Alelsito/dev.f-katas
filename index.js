@@ -692,7 +692,8 @@
 //     {
 //       title: 'Cien Años de Soledad',
 //       author: 'Gabriel García Márquez',
-//       read: true
+//       read: true,
+//       isRead (title, author, read)
 //     },
 //     {
 //       title: 'Do Androids Dream of Electric Sheep',
@@ -700,12 +701,10 @@
 //       read: false
 //     }
 //   ]
-// }
 
-// myCollection.isRead = function () {
-//   // console.log(myCollection.books)
-//   myCollection.books.map(e => {
-//   })
+//   isRead (title, author, read) {
+//     return hola
+//   }
 // }
 
 // console.log(myCollection.isRead())
@@ -796,23 +795,36 @@ Crea una funcion llamada petNames() A partir del siguiente arreglo de mascotas: 
 
 // Ejercicio 3️⃣7️⃣
 
-class Triangulo {
-  constructor (baseline, height) {
-    this.baseline = baseline
-    this.height = height
-  }
+// class Triangulo {
+//   constructor (baseline, height) {
+//     this.baseline = baseline
+//     this.height = height
+//   }
 
-  perimeter = function () {
-    const perimeter = Math.hypot(this.baseline, this.height)
-    return parseInt(perimeter * 2)
-  }
+//   perimeter = function () {
+//     const perimeter = Math.hypot(this.baseline, this.height)
+//     return parseInt(perimeter * 2)
+//   }
 
-  surface = function () {
-    const surface = (this.baseline * this.height) / 2
-    return surface
-  }
+//   surface = function () {
+//     const surface = (this.baseline * this.height) / 2
+//     return surface
+//   }
+// }
+
+// const trianguleOne = new Triangulo(2, 4)
+
+// console.log(trianguleOne.perimeter(), trianguleOne.surface())
+
+// Ejercicio 3️⃣8️⃣
+
+/*
+  Elige un pingüino de la lista de pingüinos ficticios de wikipedia Crea un objeto llamado myPenguin con propiedades que representen la información listada en cada columna en esa página de wikipedia (character, origin y notes)
+*/
+
+const myPenguin = {
+  character: '',
+  origin: '',
+  author: '',
+  notes: ''
 }
-
-const trianguleOne = new Triangulo(2, 4)
-
-console.log(trianguleOne.perimeter(), trianguleOne.surface())
