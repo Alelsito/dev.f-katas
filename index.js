@@ -750,15 +750,15 @@ Crea una funcion llamada petNames() A partir del siguiente arreglo de mascotas: 
 //   return mascotasName
 // }
 
-function petNames () {
-  const nombresMascotas = [...mascotas.map(m => {
-    return m.nombre
-  })]
-  return nombresMascotas
-}
+// function petNames () {
+//   const nombresMascotas = [...mascotas.map(m => {
+//     return m.nombre
+//   })]
+//   return nombresMascotas
+// }
 
 // console.log(petNames(mascotas))
-console.log(petNames)
+// console.log(petNames)
 
 // Ejercicio 3️⃣6️⃣
 
@@ -886,16 +886,52 @@ console.log(petNames)
   Genera un nuevo arreglo llamado nombresMascotas que contenga los nombres de todas las mascotas.
 */
 
-const mascotas = [
-  { nombre: 'Bimbo', especie: 'Hamster', comidasFavoritas: ['Semillas', 'Nueces'] },
-  { nombre: 'Ludovico', especie: 'Perro', comidasFavoritas: ['Huesos', 'Jamon'] },
-  { nombre: 'Pavlov', especie: 'Perro', comidasFavoritas: ['Croquetas', 'Pollo'] },
-  { nombre: 'Chancla', especie: 'Gato', comidasFavoritas: ['Atun', 'Pescado'] },
-  { nombre: 'Don Pepe', especie: 'Perico', comidasFavoritas: ['Semillas'] }
-]
+// const mascotas = [
+//   { nombre: 'Bimbo', especie: 'Hamster', comidasFavoritas: ['Semillas', 'Nueces'] },
+//   { nombre: 'Ludovico', especie: 'Perro', comidasFavoritas: ['Huesos', 'Jamon'] },
+//   { nombre: 'Pavlov', especie: 'Perro', comidasFavoritas: ['Croquetas', 'Pollo'] },
+//   { nombre: 'Chancla', especie: 'Gato', comidasFavoritas: ['Atun', 'Pescado'] },
+//   { nombre: 'Don Pepe', especie: 'Perico', comidasFavoritas: ['Semillas'] }
+// ]
 
-const nombresMascotas = [...mascotas.map(m => {
-  return m.nombre
-})]
+// const nombresMascotas = [...mascotas.map(m => {
+//   return m.nombre
+// })]
 
-console.log(nombresMascotas)
+// console.log(nombresMascotas)
+
+// Ejercicio 4️⃣2️⃣
+
+/*
+  Hacer superclase Maestro y subclases MaestroDeFísica y Maestro de Música y a cada uno asignarle su materia y calcular su promedio de grupo a partir de calificaciones (usar arreglos). El maestro de física tiene un atributo "antiguedad" que guarda un valor numerico, mientras que el maestro de música tiene un atributo "edad" también guardando un valor numérico.
+*/
+
+class Maestro {
+  constructor (materia, calificaciones) {
+    this.materia = materia
+    this.calificaciones = calificaciones
+  }
+
+  calcularPromedio = function () {
+    let i = 0
+    let summ = 0
+    const ArrayLen = this.calificaciones.length
+    while (i < ArrayLen) {
+      summ = summ + this.calificaciones[i]
+      i++
+    }
+    return summ / ArrayLen
+  }
+}
+
+class MaestroDeFisica extends Maestro {}
+
+class MaestroDeMusica extends Maestro {}
+
+const maestro = new Maestro('español', [2, 7, 4, 8, 9])
+const maestroFisica = new MaestroDeFisica('fisica', [5, 7, 6, 2, 9])
+const maestroMusica = new MaestroDeMusica('musica', [10, 7, 3, 8, 9])
+
+console.log(maestro.calcularPromedio())
+console.log(maestroFisica.calcularPromedio())
+console.log(maestroMusica.calcularPromedio())
