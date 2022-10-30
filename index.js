@@ -822,9 +822,50 @@ Crea una funcion llamada petNames() A partir del siguiente arreglo de mascotas: 
   Elige un pingüino de la lista de pingüinos ficticios de wikipedia Crea un objeto llamado myPenguin con propiedades que representen la información listada en cada columna en esa página de wikipedia (character, origin y notes)
 */
 
-const myPenguin = {
-  character: '',
-  origin: '',
-  author: '',
-  notes: ''
+// const myPenguin = {
+//   character: '',
+//   origin: '',
+//   author: '',
+//   notes: ''
+// }
+
+// Ejercicio 4️⃣0️⃣
+
+/*
+  Haz una clase llamada Person que siga las siguientes condiciones:
+  Sus atributos son: nombre, edad, RFC, sexo, peso y altura.
+  Creá método llamado calcularIMC() (indice de masa corporal)
+  Crear un método llamado esMayorDeEdad() y regrese un booleano
+  El constructor pide nombre, edad,sexo,peso y altura
+  Generar el RFC a partir de el nombre, edad y sexo con obtenerRFC()
+*/
+
+class Person {
+  constructor (nombre, edad, sexo, peso, altura) {
+    this.nombre = nombre
+    this.edad = edad
+    this.sexo = sexo
+    this.peso = peso
+    this.altura = altura
+  }
+
+  calcularIMC = function () {
+    return Math.ceil(this.peso / (Math.pow(this.altura / 100, 2)))
+  }
+
+  esMayorDeEdad = function () {
+    if (this.edad >= 18) {
+      return true
+    } else return false
+  }
+
+  obtenerRFC = function () {
+    return this.nombre.toString() + this.edad.toString() + this.sexo.toString()
+  }
 }
+
+const personOne = new Person('Pedro', 18, 'm', 68, 165)
+
+console.log(personOne.calcularIMC())
+console.log(personOne.esMayorDeEdad())
+console.log(personOne.obtenerRFC())
