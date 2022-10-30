@@ -768,7 +768,7 @@ Crea una funcion llamada petNames() A partir del siguiente arreglo de mascotas: 
 
 // console.log(showMessaje(callback))
 
-// Ejercicio 3️⃣6️⃣
+// Ejercicio 3️⃣7️⃣
 
 /*
   Escribe una función de orden superior llamada superior() que reciba una cadena de caracteres, debe devolver mediante un callback la cadena de caracteres en mayúsculas o en minúsculas.
@@ -793,7 +793,7 @@ Crea una funcion llamada petNames() A partir del siguiente arreglo de mascotas: 
 // console.log(`String en mayus es: ${superior('Corazon', mayus)}`)
 // console.log(`String en minus es: ${superior('Corazon', minus)}`)
 
-// Ejercicio 3️⃣7️⃣
+// Ejercicio 3️⃣8️⃣
 
 // class Triangulo {
 //   constructor (baseline, height) {
@@ -816,7 +816,7 @@ Crea una funcion llamada petNames() A partir del siguiente arreglo de mascotas: 
 
 // console.log(trianguleOne.perimeter(), trianguleOne.surface())
 
-// Ejercicio 3️⃣8️⃣
+// Ejercicio 3️⃣9️⃣
 
 /*
   Elige un pingüino de la lista de pingüinos ficticios de wikipedia Crea un objeto llamado myPenguin con propiedades que representen la información listada en cada columna en esa página de wikipedia (character, origin y notes)
