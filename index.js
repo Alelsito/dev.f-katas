@@ -750,7 +750,15 @@ Crea una funcion llamada petNames() A partir del siguiente arreglo de mascotas: 
 //   return mascotasName
 // }
 
+function petNames () {
+  const nombresMascotas = [...mascotas.map(m => {
+    return m.nombre
+  })]
+  return nombresMascotas
+}
+
 // console.log(petNames(mascotas))
+console.log(petNames)
 
 // Ejercicio 3️⃣6️⃣
 
