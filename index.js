@@ -906,32 +906,51 @@ Crea una funcion llamada petNames() A partir del siguiente arreglo de mascotas: 
   Hacer superclase Maestro y subclases MaestroDeFísica y Maestro de Música y a cada uno asignarle su materia y calcular su promedio de grupo a partir de calificaciones (usar arreglos). El maestro de física tiene un atributo "antiguedad" que guarda un valor numerico, mientras que el maestro de música tiene un atributo "edad" también guardando un valor numérico.
 */
 
-class Maestro {
-  constructor (materia, calificaciones) {
-    this.materia = materia
-    this.calificaciones = calificaciones
-  }
+// class Maestro {
+//   constructor (materia, calificaciones) {
+//     this.materia = materia
+//     this.calificaciones = calificaciones
+//   }
 
-  calcularPromedio = function () {
-    let i = 0
-    let summ = 0
-    const ArrayLen = this.calificaciones.length
-    while (i < ArrayLen) {
-      summ = summ + this.calificaciones[i]
-      i++
-    }
-    return summ / ArrayLen
+//   calcularPromedio = function () {
+//     let i = 0
+//     let summ = 0
+//     const ArrayLen = this.calificaciones.length
+//     while (i < ArrayLen) {
+//       summ = summ + this.calificaciones[i]
+//       i++
+//     }
+//     return summ / ArrayLen
+//   }
+// }
+
+// class MaestroDeFisica extends Maestro {}
+
+// class MaestroDeMusica extends Maestro {}
+
+// const maestro = new Maestro('español', [2, 7, 4, 8, 9])
+// const maestroFisica = new MaestroDeFisica('fisica', [5, 7, 6, 2, 9])
+// const maestroMusica = new MaestroDeMusica('musica', [10, 7, 3, 8, 9])
+
+// console.log(maestro.calcularPromedio())
+// console.log(maestroFisica.calcularPromedio())
+// console.log(maestroMusica.calcularPromedio())
+
+// Ejercicio 4️⃣5️⃣
+
+/*
+  Crea una función llamada modificando() que reciba como parámetro una cadena de texto y la retorna poniendo un guión entre cada letra.
+  Ejemplo: “Hola mundo” → “H-o-l-a-m-u-n-d-o”
+*/
+
+function modificando (string) {
+  const cleanString = string.replace(/ /g, '')
+  const length = cleanString.length - 1
+  const split = cleanString.split('')
+  for (let i = 0; i < length; i++) {
+    split[i] += '-'
   }
+  return split.join('')
 }
 
-class MaestroDeFisica extends Maestro {}
-
-class MaestroDeMusica extends Maestro {}
-
-const maestro = new Maestro('español', [2, 7, 4, 8, 9])
-const maestroFisica = new MaestroDeFisica('fisica', [5, 7, 6, 2, 9])
-const maestroMusica = new MaestroDeMusica('musica', [10, 7, 3, 8, 9])
-
-console.log(maestro.calcularPromedio())
-console.log(maestroFisica.calcularPromedio())
-console.log(maestroMusica.calcularPromedio())
+console.log(modificando('Hola Mellamoasdgaf dsad'))
