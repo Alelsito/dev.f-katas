@@ -631,7 +631,7 @@
 
 // console.log(time())
 
-// Ejercicio 3️⃣1️⃣
+// Ejercicio 3️⃣1️⃣ Frequent
 
 /*
   Crea una funcion llamada frequent() que recibirá de parámetro un arreglo con distintos números, retornar el elemento más frecuente dentro del arreglo.
@@ -943,14 +943,125 @@ Crea una funcion llamada petNames() A partir del siguiente arreglo de mascotas: 
   Ejemplo: “Hola mundo” → “H-o-l-a-m-u-n-d-o”
 */
 
-function modificando (string) {
-  const cleanString = string.replace(/ /g, '')
-  const length = cleanString.length - 1
-  const split = cleanString.split('')
-  for (let i = 0; i < length; i++) {
-    split[i] += '-'
-  }
-  return split.join('')
-}
+// function modificando (string) {
+//   const cleanString = string.replace(/ /g, '')
+//   const length = cleanString.length - 1
+//   const split = cleanString.split('')
+//   for (let i = 0; i < length; i++) {
+//     split[i] += '-'
+//   }
+//   return split.join('')
+// }
 
-console.log(modificando('Hola Mellamoasdgaf dsad'))
+// console.log(modificando('Hola Mellamoasdgaf dsad'))
+
+// 👹
+// Ejercicios Primera Sesion
+
+// **Write a JavaScript function to check whether an `input` is an array or not
+
+// const inputIsArray = (input) => {
+//   return Array.isArray(input)
+// }
+
+// console.log(inputIsArray([0, 1, 3]))
+
+// **Write a JavaScript function to clone an array
+
+// const initialArray = [0, 'Pedro', 'Flores', true, false]
+
+// const cloneArray = (array) => {
+//   const cloneArray = [...array]
+//   return cloneArray
+// }
+
+// console.log(cloneArray(initialArray))
+
+// **Write a JavaScript function to get the first element of an array. Passing a parameter 'n' will return the first 'n' elements of the array
+
+// const array = ['Corazon', 'Pedrito', 1, 4, 1, 'Corazon']
+
+// const findFirstElement = (n) => {
+//   return array.find(e => e === n)
+// }
+
+// console.log(findFirstElement('Corazon'), array.indexOf(findFirstElement('Corazon')))
+
+// **Write a simple JavaScript program to join all elements of the following array into a string myColor = ["Red", "Green", "White", "Black"];
+
+// const myColor = ['Red', 'Green', 'White', 'Black']
+
+// const joinArrayIntoString = (array) => {
+//   return array.join('')
+// }
+
+// console.log(joinArrayIntoString(myColor))
+
+// **Write a JavaScript program to find the most frequent item of an array ["Banana", "Orange", "Apple", "Mango", "Kiwi", "Kiwi", "Kiwi", "Apple"];
+
+// const array = ['Banana', 'Orange', 'Apple', 'Mango', 'Kiwi', 'Kiwi', 'Kiwi', 'Apple']
+
+// const mostFrequentItemOfArray = (array) => {
+//   let frequent = ''
+//   let contador = 0
+//   let cuenta = 0
+
+//   array.forEach(e => {
+//     cuenta = 0
+//     array.forEach(s => {
+//       if (e === s) { cuenta++ }
+//     })
+//     if (cuenta > contador) {
+//       contador = cuenta
+//       frequent = e
+//     }
+//   })
+//   return frequent
+// }
+
+// console.log(mostFrequentItemOfArray(array))
+
+// **There are two arrays with individual values, write a JavaScript program to compute the sum of each individual index value from the given arrays: [2,34,67,89] [56,200,125,9]
+
+// const firstArray = [1, 5, 7, 2, 10]
+// const secondArray = [5, 100, 30, 40]
+
+// const sumArrays = (first, second) => {
+//   const initialValue = 0
+//   const sum1 = first.reduce(
+//     (previousValue, currentValue) => previousValue + currentValue,
+//     initialValue
+//   )
+
+//   const sum2 = second.reduce(
+//     (previousValue, currentValue) => previousValue + currentValue,
+//     initialValue
+//   )
+
+//   return { sum1, sum2 }
+// }
+
+// console.log(sumArrays(firstArray, secondArray))
+
+// **Write a JavaScript function to sort the following array of objects by title value.
+// var library = [
+//    { author: 'Bill Gates', title: 'The Road Ahead', libraryID: 1254},
+//    { author: 'Steve Jobs', title: 'Walter Isaacson', libraryID: 4264},
+//    { author: 'Suzanne Collins', title: 'Mockingjay: The Final Book of The Hunger Games', libraryID: 3245}
+//    ];
+
+// const library = [
+//   { author: 'Bill Gates', title: 'The Road Ahead', libraryID: 1254 },
+//   { author: 'Steve Jobs', title: 'Walter Isaacson', libraryID: 4264 },
+//   { author: 'Suzanne Collins', title: 'Mockingjay: The Final Book of The Hunger Games', libraryID: 3245 }
+// ]
+
+// const sortByTitle = (array) => {
+//   return array.sort((a, b) => {
+//     if (a.title < b.title) return -1
+//     if (a.title > b.title) return 1
+//     return 0
+//   })
+// }
+
+// console.log(sortByTitle(library))
